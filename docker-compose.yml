@@ -3,6 +3,8 @@ services:
   my-go-hello-world:
     container_name: go-rest-api
     build: .
+    ports: 
+      - 8000:8000
     command: go run main.go
     volumes:
       - ./:/go/src/app
